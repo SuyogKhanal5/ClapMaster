@@ -1,3 +1,5 @@
+# OpenCV Tutorial Library
+
 import cv2
 import mediapipe as mp
 import time
