@@ -3,7 +3,7 @@ import cv2
 import math
 
 cap = cv2.VideoCapture(1)
-detector = htm.handDetector(0.5)
+detector = htm.handDetector(0.25)
 
 prevTime = 0
 currTime = 0
@@ -29,7 +29,7 @@ while True:
 
         length = math.hypot(x2 - x1, y2 - y1)
 
-        if not handstogether and length < 65:
+        if not handstogether and length < 75:
             claps += 1
             handstogether = True
         elif handstogether and length > 90:
