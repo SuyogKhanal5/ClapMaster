@@ -13,7 +13,7 @@ currTime = 0
 
 claps = 0
 
-handsTogether = False
+handstogether = False
 
 # Change the loop to something that makes more sense later
 
