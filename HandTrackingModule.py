@@ -63,13 +63,18 @@ def main():
     prevTime = 0
     currTime = 0
 
+    fpsLimit = 1 # throttle limit
+    startTime = time.time()
+
     cap = cv2.VideoCapture(1) 
+    cap.set(cv2.CAP_PROP_FPS, 15) 
 
     detector = handDetector()
 
     while True:
         success, img = cap.read()
         img = detector.findHands(img)  
+        
         lmList = detector.findPosition(img)
         img = detector.placeCircle(img, 8)
 

@@ -1,19 +1,22 @@
 import HandTrackingModule as htm
 import cv2
 import math
+import time
 
+# change input if necessary for pi
 cap = cv2.VideoCapture(1)
+cap.set(cv2.cv.CV_CAP_PROP_FPS, 15)
+
 detector = htm.handDetector(0.25)
 
 prevTime = 0
 currTime = 0
 
-cap = cv2.VideoCapture(1) 
-
-detector = htm.handDetector()
-
 claps = 0
-handstogether = False
+
+handsTogether = False
+
+# Change the loop to something that makes more sense later
 
 while True:
     success, img = cap.read()
