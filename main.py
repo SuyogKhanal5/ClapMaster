@@ -5,7 +5,6 @@ import time
 
 # change input if necessary for pi
 cap = cv2.VideoCapture(1)
-cap.set(cv2.cv.CV_CAP_PROP_FPS, 15)
 
 detector = htm.handDetector(0.25)
 
