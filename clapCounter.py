@@ -1,5 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 import HandTrackingModule as htm
 import cv2
 import math
