@@ -20,10 +20,10 @@ time.sleep(1)
 
 print("rotating at intervals of 12 degrees")
 duty = 2
-while duty <= 170
-servo.ChangeDutyCycle(duty)
-time.sleep(1)
-duty = duty+1
+while duty <= 170:
+	servo.ChangeDutyCycle(duty)
+	time.sleep(1)
+	duty = duty+1
 
 print("turning back to 0")
 servo.ChangeDutyCycle(2)
